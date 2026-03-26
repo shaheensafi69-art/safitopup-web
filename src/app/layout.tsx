@@ -12,9 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // زبان اصلی روی انگلیسی تنظیم شده است
     <html lang="en">
-      <body className="bg-[#020202] antialiased selection:bg-[#D4AF37] selection:text-black">
+      <body 
+        className="bg-[#020202] antialiased selection:bg-[#D4AF37] selection:text-black min-h-screen"
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>
