@@ -54,7 +54,7 @@ export default function Footer() {
               {/* Profile Photo - اصلاح آدرس و پسوند */}
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-[3px] border-[#D4AF37] p-1 relative z-10 overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.3)] bg-[#111]">
                 <Image 
-                  src="/shaheen.jpg" // چک کنید اگر پسوند شما jpeg است به jpeg تغییر دهید
+                  src="/founder-profile.jpg" // چک کنید اگر پسوند شما jpeg است به jpeg تغییر دهید
                   alt="Shaheen Safi" 
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"

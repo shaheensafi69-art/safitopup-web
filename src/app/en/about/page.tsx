@@ -40,7 +40,7 @@ export default function AboutPage() {
                 
                 <div className="relative h-full w-full rounded-[30px] md:rounded-[50px] overflow-hidden border border-white/10 shadow-2xl group bg-[#111]">
                   <Image 
-                    src="/shaheen.jpg" 
+                    src="/founder-profile.jpg" 
                     alt="Shaheen Safi" 
                     fill 
                     priority
