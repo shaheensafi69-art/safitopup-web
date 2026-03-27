@@ -135,8 +135,7 @@ export default function AboutPage() {
               READY TO <span className="text-[#D4AF37]">TRANSFORM</span> <br /> THE DIGITAL LANDSCAPE?
             </h3>
             <div className="flex flex-col md:flex-row justify-center gap-6">
-                <a href="en/contact" className="px-12 py-6 bg-[#D4AF37] text-black font-black text-xs tracking-[0.4em] rounded-full shadow-[0_20px_50px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 transition-all uppercase">
-                  Executive Consultation
+                                <a href="en/contact" className="px-12 py-6 bg-[#D4AF37] text-black font-black text-xs tracking-[0.4em] rounded-full shadow-[0_20px_50px_rgba(212,175,55,0.4)] hover:scale-105 active:scale-95 transition-all uppercase">
                 </a>
                 <a href="https://safipay.net" className="px-12 py-6 bg-transparent border border-white/20 text-white font-black text-xs tracking-[0.4em] rounded-full hover:bg-white hover:text-black transition-all uppercase">
                   Visit SafiPay
