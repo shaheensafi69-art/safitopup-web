@@ -50,7 +50,7 @@ export default function Header() {
         <Link href="/en" className="relative z-[110] group">
           <div className="bg-[#020202] px-6 md:px-8 py-2 md:py-3 rounded-full border border-[#D4AF37]/30 shadow-2xl transition-all group-hover:border-[#D4AF37]">
             <span className="text-[#D4AF37] font-black tracking-tighter italic text-xl md:text-2xl uppercase">
-              SAFI <span className="text-white">SOCIAL</span>
+              SAFI <span className="text-white">TOPUP</span>
             </span>
           </div>
         </Link>
