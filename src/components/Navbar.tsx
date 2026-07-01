@@ -50,7 +50,7 @@ export default function Header() {
         <Link href="/en" className="relative z-[110] group">
           <div className="bg-[#020202] px-6 md:px-8 py-2 md:py-3 rounded-full border border-[#D4AF37]/30 shadow-2xl transition-all group-hover:border-[#D4AF37]">
             <span className="text-[#D4AF37] font-black tracking-tighter italic text-xl md:text-2xl uppercase">
-              SAFI <span className="text-white">TOPUP</span>
+              SAFI <span className="text-white">SOCIAL</span>
             </span>
           </div>
         </Link>
@@ -58,17 +58,36 @@ export default function Header() {
         {/* --- DESKTOP NAVIGATION --- */}
         <nav className="hidden lg:flex items-center animated-flag-box px-4 py-2 rounded-full shadow-2xl">
           <div className="glass-overlay"></div>
-          <div className="relative z-10 flex gap-1">
+          <div className="relative z-10 flex gap-1 items-center">
             <NavLink href="/en" label="HOME" active={pathname === '/en'} />
+            <NavLink href="/en/social" label="SOCIAL" active={pathname.includes('/social')} isSpecial={true} />
             <NavLink href="/en/partners" label="PARTNERS" active={pathname.includes('/partners')} />
             <NavLink href="/en/about" label="ABOUT" active={pathname.includes('/about')} />
             <NavLink href="/en/contact" label="CONTACT" active={pathname.includes('/contact')} />
           </div>
         </nav>
 
-        {/* --- RIGHT SECTION: LANG & HAMBURGER --- */}
-        <div className="flex items-center gap-4 relative z-[110]">
-          {/* LANGUAGE DROPDOWN (Hidden on very small screens if needed, but here kept) */}
+        {/* --- RIGHT SECTION: AUTH, LANG & HAMBURGER --- */}
+        <div className="flex items-center gap-3 md:gap-4 relative z-[110]">
+          <div className="hidden sm:flex items-center gap-2">
+            <a
+              href="https://app.safitopup.site/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-[#D4AF37]/40 px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-[#D4AF37] transition-all hover:bg-[#D4AF37] hover:text-black"
+            >
+              Login
+            </a>
+            <a
+              href="https://app.safitopup.site/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[#D4AF37] px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black transition-all hover:bg-[#f0c84b]"
+            >
+              Get Started
+            </a>
+          </div>
+
           <div className="relative">
             <button 
               onClick={() => setIsOpen(!isOpen)}
@@ -113,7 +132,26 @@ export default function Header() {
         {/* --- MOBILE OVERLAY MENU --- */}
         <div className={`fixed inset-0 bg-[#020202] z-[100] lg:hidden transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <div className="flex flex-col items-center justify-center h-full gap-8">
+            <div className="flex flex-col items-center gap-3 sm:hidden">
+              <a
+                href="https://app.safitopup.site/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border border-[#D4AF37]/40 px-5 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-[#D4AF37]"
+              >
+                Login
+              </a>
+              <a
+                href="https://app.safitopup.site/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-[#D4AF37] px-5 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black"
+              >
+                Get Started
+              </a>
+            </div>
             <MobileNavLink href="/en" label="HOME" active={pathname === '/en'} />
+            <MobileNavLink href="/en/social" label="SOCIAL SERVICES" active={pathname.includes('/social')} />
             <MobileNavLink href="/en/partners" label="PARTNERS" active={pathname.includes('/partners')} />
             <MobileNavLink href="/en/about" label="ABOUT" active={pathname.includes('/about')} />
             <MobileNavLink href="/en/contact" label="CONTACT" active={pathname.includes('/contact')} />
@@ -125,9 +163,19 @@ export default function Header() {
   );
 }
 
-function NavLink({ href, label, active }: { href: string, label: string, active: boolean }) {
+function NavLink({ href, label, active, isSpecial = false }: { href: string, label: string, active: boolean, isSpecial?: boolean }) {
+  const baseStyle = "px-7 py-2.5 rounded-full text-[12px] font-black tracking-[0.2em] transition-all uppercase";
+  
+  if (isSpecial) {
+    return (
+      <Link href={href} className={`${baseStyle} ${active ? 'text-black bg-[#D4AF37]' : 'text-[#D4AF37] border border-[#D4AF37]/30 hover:bg-[#D4AF37] hover:text-black shadow-[0_0_15px_rgba(212,175,55,0.2)]'}`}>
+        {label}
+      </Link>
+    );
+  }
+
   return (
-    <Link href={href} className={`px-7 py-2.5 rounded-full text-[12px] font-black tracking-[0.2em] transition-all uppercase ${active ? 'text-[#D4AF37] bg-white/10' : 'text-white/40 hover:text-white hover:bg-white/5'}`}>
+    <Link href={href} className={`${baseStyle} ${active ? 'text-[#D4AF37] bg-white/10' : 'text-white/40 hover:text-white hover:bg-white/5'}`}>
       {label}
     </Link>
   );

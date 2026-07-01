@@ -20,7 +20,6 @@ const nextConfig = {
 
   // --- تنظیمات اضافی برای پایداری بیشتر در دپلوی ---
   reactStrictMode: true,
-  swcMinify: true,
 };
 
 export default nextConfig;
