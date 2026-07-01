@@ -69,18 +69,20 @@ export default function Header() {
         {/* --- RIGHT SECTION: AUTH, LANG & HAMBURGER --- */}
         <div className="flex items-center gap-3 md:gap-4 relative z-[110]">
           <div className="hidden sm:flex items-center gap-2">
-            <a
-              href="https://app.safitopup.site/login"
+            <button
+              type="button"
+              onClick={() => window.location.href = 'https://app.safitopup.site/login'}
               className="rounded-full border border-[#D4AF37]/40 px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-[#D4AF37] transition-all hover:bg-[#D4AF37] hover:text-black"
             >
               Login
-            </a>
-            <a
-              href="https://app.safitopup.site/signup"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.location.href = 'https://app.safitopup.site/signup'}
               className="rounded-full bg-[#D4AF37] px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black transition-all hover:bg-[#f0c84b]"
             >
               Get Started
-            </a>
+            </button>
           </div>
 
           <div className="relative">
@@ -128,18 +130,20 @@ export default function Header() {
         <div className={`fixed inset-0 bg-[#020202] z-[100] lg:hidden transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <div className="flex flex-col items-center justify-center h-full gap-8">
             <div className="flex flex-col items-center gap-3 sm:hidden">
-              <a
-                href="https://app.safitopup.site/login"
+              <button
+                type="button"
+                onClick={() => window.location.href = 'https://app.safitopup.site/login'}
                 className="rounded-full border border-[#D4AF37]/40 px-5 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-[#D4AF37]"
               >
                 Login
-              </a>
-              <a
-                href="https://app.safitopup.site/signup"
+              </button>
+              <button
+                type="button"
+                onClick={() => window.location.href = 'https://app.safitopup.site/signup'}
                 className="rounded-full bg-[#D4AF37] px-5 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black"
               >
                 Get Started
-              </a>
+              </button>
             </div>
             <MobileNavLink href="/en" label="HOME" active={pathname === '/en'} />
             <MobileNavLink href="/en/partners" label="PARTNERS" active={pathname.includes('/partners')} />
