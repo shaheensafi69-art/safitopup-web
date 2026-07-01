@@ -60,7 +60,6 @@ export default function Header() {
           <div className="glass-overlay"></div>
           <div className="relative z-10 flex gap-1 items-center">
             <NavLink href="/en" label="HOME" active={pathname === '/en'} />
-            <NavLink href="/en/social" label="SOCIAL" active={pathname.includes('/social')} isSpecial={true} />
             <NavLink href="/en/partners" label="PARTNERS" active={pathname.includes('/partners')} />
             <NavLink href="/en/about" label="ABOUT" active={pathname.includes('/about')} />
             <NavLink href="/en/contact" label="CONTACT" active={pathname.includes('/contact')} />
@@ -72,16 +71,12 @@ export default function Header() {
           <div className="hidden sm:flex items-center gap-2">
             <a
               href="https://app.safitopup.site/login"
-              target="_blank"
-              rel="noopener noreferrer"
               className="rounded-full border border-[#D4AF37]/40 px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-[#D4AF37] transition-all hover:bg-[#D4AF37] hover:text-black"
             >
               Login
             </a>
             <a
               href="https://app.safitopup.site/signup"
-              target="_blank"
-              rel="noopener noreferrer"
               className="rounded-full bg-[#D4AF37] px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black transition-all hover:bg-[#f0c84b]"
             >
               Get Started
@@ -135,23 +130,18 @@ export default function Header() {
             <div className="flex flex-col items-center gap-3 sm:hidden">
               <a
                 href="https://app.safitopup.site/login"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="rounded-full border border-[#D4AF37]/40 px-5 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-[#D4AF37]"
               >
                 Login
               </a>
               <a
                 href="https://app.safitopup.site/signup"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="rounded-full bg-[#D4AF37] px-5 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black"
               >
                 Get Started
               </a>
             </div>
             <MobileNavLink href="/en" label="HOME" active={pathname === '/en'} />
-            <MobileNavLink href="/en/social" label="SOCIAL SERVICES" active={pathname.includes('/social')} />
             <MobileNavLink href="/en/partners" label="PARTNERS" active={pathname.includes('/partners')} />
             <MobileNavLink href="/en/about" label="ABOUT" active={pathname.includes('/about')} />
             <MobileNavLink href="/en/contact" label="CONTACT" active={pathname.includes('/contact')} />
