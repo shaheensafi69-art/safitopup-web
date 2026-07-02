@@ -72,16 +72,20 @@ export default function Header() {
             <button
               type="button"
               onClick={() => window.location.href = 'https://app.safitopup.site/login'}
-              className="rounded-full border border-[#D4AF37]/40 px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-[#D4AF37] transition-all hover:bg-[#D4AF37] hover:text-black"
+              className="animated-flag-box px-4 md:px-5 py-2 md:py-2.5 rounded-full shadow-2xl transition-all hover:scale-[1.02]"
             >
-              Login
+              <span className="relative z-10 block text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-white">
+                Login
+              </span>
             </button>
             <button
               type="button"
               onClick={() => window.location.href = 'https://app.safitopup.site/signup'}
-              className="rounded-full bg-[#D4AF37] px-4 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black transition-all hover:bg-[#f0c84b]"
+              className="animated-flag-box px-4 md:px-5 py-2 md:py-2.5 rounded-full shadow-2xl transition-all hover:scale-[1.02]"
             >
-              Get Started
+              <span className="relative z-10 block text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-white">
+                Get Started
+              </span>
             </button>
           </div>
 
@@ -133,16 +137,20 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => window.location.href = 'https://app.safitopup.site/login'}
-                className="rounded-full border border-[#D4AF37]/40 px-5 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-[#D4AF37]"
+                className="animated-flag-box px-5 py-2.5 rounded-full shadow-2xl"
               >
-                Login
+                <span className="relative z-10 block text-[10px] font-black uppercase tracking-[0.25em] text-white">
+                  Login
+                </span>
               </button>
               <button
                 type="button"
                 onClick={() => window.location.href = 'https://app.safitopup.site/signup'}
-                className="rounded-full bg-[#D4AF37] px-5 py-2 text-[11px] font-black uppercase tracking-[0.25em] text-black"
+                className="animated-flag-box px-5 py-2.5 rounded-full shadow-2xl"
               >
-                Get Started
+                <span className="relative z-10 block text-[10px] font-black uppercase tracking-[0.25em] text-white">
+                  Get Started
+                </span>
               </button>
             </div>
             <MobileNavLink href="/en" label="HOME" active={pathname === '/en'} />
