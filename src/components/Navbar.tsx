@@ -71,7 +71,7 @@ export default function Header() {
           <div className="hidden sm:flex items-center gap-2">
             <button
               type="button"
-              onClick={() => window.location.href = 'https://app.safitopup.site/login'}
+              onClick={() => window.location.href = 'https://app.safitopup.site'}
               className="animated-flag-box px-4 md:px-5 py-2 md:py-2.5 rounded-full shadow-2xl transition-all hover:scale-[1.02]"
             >
               <span className="relative z-10 block text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-white">
@@ -80,7 +80,7 @@ export default function Header() {
             </button>
             <button
               type="button"
-              onClick={() => window.location.href = 'https://app.safitopup.site/signup'}
+              onClick={() => window.location.href = 'https://app.safitopup.site'}
               className="animated-flag-box px-4 md:px-5 py-2 md:py-2.5 rounded-full shadow-2xl transition-all hover:scale-[1.02]"
             >
               <span className="relative z-10 block text-[10px] md:text-[11px] font-black uppercase tracking-[0.25em] text-white">
