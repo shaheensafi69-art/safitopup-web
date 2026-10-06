@@ -2,7 +2,7 @@
 const nextConfig = {
   // --- حل مشکل نمایش عکس‌ها در Netlify ---
   images: {
-    unoptimized: true, 
+    unoptimized: true,
     // این تنظیم به Next.js دستور می‌دهد که عکس‌ها را بدون تغییر لود کند.
     // نتلیفای گاهی در پردازش عکس‌های محلی (Local Images) دچار اختلال می‌شود که با این کد کاملاً حل می‌گردد.
   },
@@ -13,6 +13,21 @@ const nextConfig = {
       {
         source: '/',
         destination: '/en',
+        permanent: true,
+      },
+      {
+        source: '/founder/:slug*',
+        destination: '/en/founder/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/en/shaheen-safi',
+        destination: '/en/founder/shaheen-safi',
+        permanent: true,
+      },
+      {
+        source: '/shaheen-safi',
+        destination: '/en/founder/shaheen-safi',
         permanent: true,
       },
     ];

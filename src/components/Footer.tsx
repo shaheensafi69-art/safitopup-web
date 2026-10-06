@@ -3,16 +3,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  Building2, 
-  ShieldCheck, 
-  Globe2, 
-  Cpu, 
-  ArrowUpRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Scale, 
+import {
+  Building2,
+  ShieldCheck,
+  Globe2,
+  Cpu,
+  ArrowUpRight,
+  Mail,
+  Phone,
+  MapPin,
+  Scale,
   FileText,
   Lock,
   ExternalLink
@@ -66,13 +66,13 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-[#020204] text-[#F0F0F5] pt-24 pb-14 border-t border-white/10 overflow-hidden">
-      
+
       {/* Background Lighting Grid */}
       <div className="absolute inset-0 bg-radial-grid opacity-20 pointer-events-none" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[350px] bg-gradient-to-t from-[#D4AF37]/10 to-transparent blur-[160px] pointer-events-none" />
 
       <div className="w-[94%] max-w-[1720px] mx-auto px-4 relative z-10">
-        
+
         {/* --- TOP INSTITUTIONAL ACCREDITATION BAR --- */}
         <div className="pb-16 mb-16 border-b border-white/10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="flex items-start gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5">
@@ -126,7 +126,7 @@ export default function Footer() {
 
         {/* --- MASTER FOOTER DIRECTORY (4 COLUMNS) --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
-          
+
           {/* COL 1: BRAND & WHOLESALE TELECOM (4 Cols) */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/en" className="flex items-center gap-3">
@@ -205,6 +205,33 @@ export default function Footer() {
             <ul className="space-y-2 text-xs">
               <li>
                 <Link
+                  href="/en/about#leadership"
+                  className="text-[#D4AF37] hover:text-white transition flex items-center gap-2 py-1 font-bold"
+                >
+                  <Building2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Leadership Team (5 Leaders)</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/en/about"
+                  className="text-[#A0A0B5] hover:text-white transition flex items-center gap-2 py-1"
+                >
+                  <Building2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>About Holding Charter</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/en/partners"
+                  className="text-[#A0A0B5] hover:text-white transition flex items-center gap-2 py-1"
+                >
+                  <Globe2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Carrier Network</span>
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/en/terms"
                   className="text-[#A0A0B5] hover:text-white transition flex items-center gap-2 py-1"
                 >
@@ -219,24 +246,6 @@ export default function Footer() {
                 >
                   <ShieldCheck className="w-3.5 h-3.5 text-[#D4AF37]" />
                   <span>Privacy Codex</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/en/partners"
-                  className="text-[#A0A0B5] hover:text-white transition flex items-center gap-2 py-1"
-                >
-                  <Globe2 className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>Carrier Network</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/en/about"
-                  className="text-[#A0A0B5] hover:text-white transition flex items-center gap-2 py-1"
-                >
-                  <Building2 className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>About Holding</span>
                 </Link>
               </li>
               <li>
@@ -281,7 +290,7 @@ export default function Footer() {
                     SHAHEEN SAFI
                   </h3>
                   <span className="text-[#D4AF37] text-[10px] font-black tracking-[0.2em] uppercase block mt-1">
-                    FOUNDER & CHAIRMAN
+                    DIRECTOR & FOUNDER
                   </span>
                   <span className="text-[9px] text-[#8E8EA0] font-mono block mt-0.5">
                     ITU ISTANBUL ALUMNUS
@@ -290,19 +299,28 @@ export default function Footer() {
               </div>
 
               <p className="text-[11px] text-[#A0A0B5] leading-relaxed mb-4">
-                Visionary technology entrepreneur, founder of <strong className="text-white">Safi International Capital LTD</strong>, SafiPay, Safi TopUp, and ZEV. Leading sovereign digital transformation across global markets.
+                Visionary technology entrepreneur, Director & Founder of <strong className="text-white">Safi International Capital LTD</strong>, SafiPay, Safi TopUp, and ZEV. Leading sovereign digital transformation across global markets.
               </p>
 
-              {/* Personal Blog Link */}
-              <a
-                href="https://shaheensafi.blog/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 rounded-xl bg-[#D4AF37] text-black font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#F3E5AB] transition shadow-lg mb-4"
-              >
-                <span>Visit Personal Portal</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
+              {/* Personal Dossier & Blog Link */}
+              <div className="space-y-2 mb-4">
+                <Link
+                  href="/en/founder/shaheen-safi"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#D4AF37] text-black font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#F3E5AB] transition shadow-lg"
+                >
+                  <span>View Executive Dossier</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+                <a
+                  href="https://shaheensafi.blog/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-2 px-4 rounded-xl bg-white/5 border border-white/10 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-white/10 transition"
+                >
+                  <span>Founder's Personal Blog</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              </div>
 
               {/* Verified Profiles */}
               <div className="pt-3 border-t border-white/10 flex flex-wrap gap-2 text-[10px]">

@@ -20,6 +20,7 @@ import {
   Database
 } from "lucide-react";
 import AdSenseInFeed from "@/components/AdSenseInFeed";
+import LeadershipTeam from "@/components/LeadershipTeam";
 
 export default function EnglishHomePage() {
   const ecosystemData = [
@@ -566,6 +567,11 @@ export default function EnglishHomePage() {
 
       {/* --- IN-FEED GOOGLE ADSENSE SPONSORED UNIT --- */}
       <AdSenseInFeed />
+
+      {/* ========================================================= */}
+      {/* 4.5. SOVEREIGN LEADERSHIP & CORE FOUNDERS                 */}
+      {/* ========================================================= */}
+      <LeadershipTeam id="leadership" />
 
       {/* ========================================================= */}
       {/* 5. INSTITUTIONAL SECURITY & LEGAL ACCREDITATION           */}

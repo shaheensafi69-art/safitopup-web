@@ -11,9 +11,11 @@ import {
   CheckCircle2, 
   ExternalLink,
   Scale,
-  Award,
-  BookOpen
+  Award, 
+  BookOpen,
+  Users
 } from "lucide-react";
+import LeadershipTeam from "@/components/LeadershipTeam";
 
 export default function AboutPage() {
   const ecosystemItems = [
@@ -93,7 +95,7 @@ export default function AboutPage() {
               <div className="relative w-full max-w-md aspect-[4/5] rounded-[40px] overflow-hidden border-2 border-[#D4AF37]/50 shadow-[0_0_50px_rgba(212,175,55,0.3)] group bg-[#0A0A12]">
                 <Image
                   src="/shaheen-founder.jpg"
-                  alt="Shaheen Safi - Founder & CEO"
+                  alt="Shaheen Safi - Director & Founder"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   priority
@@ -101,7 +103,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
                 <div className="absolute bottom-8 left-8 right-8">
                   <span className="text-[10px] font-mono text-[#D4AF37] tracking-[0.3em] uppercase block mb-1">
-                    CHIEF ARCHITECT & FOUNDER
+                    DIRECTOR & FOUNDER
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
                     SHAHEEN SAFI
@@ -130,7 +132,7 @@ export default function AboutPage() {
               </p>
 
               <p className="text-sm md:text-base text-[#A0A0B5] leading-relaxed">
-                Under his leadership as Chairman and Chief Executive, <strong className="text-white">Safi International Capital LTD</strong> has expanded from strategic early-stage ventures into a multi-vertical conglomerate operating across international fintech, carrier switching rails, artificial intelligence, and decentralized media ecosystems.
+                Under his leadership as Director and Founder, <strong className="text-white">Safi International Capital LTD</strong> has expanded from strategic early-stage ventures into a multi-vertical conglomerate operating across international fintech, carrier switching rails, artificial intelligence, and decentralized media ecosystems.
               </p>
 
               <div className="p-6 rounded-2xl bg-gradient-to-r from-[#14120A] to-[#0A0A10] border border-[#D4AF37]/30 relative overflow-hidden">
@@ -138,20 +140,27 @@ export default function AboutPage() {
                   "Our mission is to establish sovereign digital freedom. We do not build ephemeral products; we engineer institutional bridges that enable entire nations to participate in global economic liquidity without friction or discrimination."
                 </div>
                 <div className="text-[10px] font-mono text-[#D4AF37] uppercase font-bold">
-                  — Shaheen Safi, Founder & CEO
+                  — Shaheen Safi, Director & Founder
                 </div>
               </div>
 
-              {/* Direct Link to Shaheen Safi Personal Portal */}
-              <div className="pt-2">
+              {/* Direct Links to Bio & Blog */}
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/en/founder/shaheen-safi"
+                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#D4AF37] text-black font-black text-xs uppercase tracking-widest hover:bg-[#F3E5AB] shadow-[0_10px_25px_rgba(212,175,55,0.3)] transition"
+                >
+                  <span>View Executive Dossier</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
                 <a
                   href="https://shaheensafi.blog/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#D4AF37] text-black font-black text-xs uppercase tracking-widest hover:bg-[#F3E5AB] shadow-[0_10px_25px_rgba(212,175,55,0.3)] transition"
+                  className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold text-xs uppercase tracking-widest hover:bg-white/10 transition"
                 >
-                  <span>Explore Founder's Personal Blog & Essays</span>
-                  <ArrowUpRight className="w-4 h-4" />
+                  <span>Founder's Blog & Essays</span>
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
 
@@ -223,6 +232,11 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* --- SOVEREIGN LEADERSHIP & CORE FOUNDERS TEAM --- */}
+          <div className="mb-28">
+            <LeadershipTeam id="leadership" showIntro={true} />
           </div>
 
           {/* --- INSTITUTIONAL METRICS MATRIX --- */}
